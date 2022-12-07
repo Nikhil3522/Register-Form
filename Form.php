@@ -1,3 +1,5 @@
+<?php include("connection.php"); ?>
+
 <html>
     <header>
         <title>Nikhil Jha</title>
@@ -7,7 +9,8 @@
             margin-left: 40%
         }
         body {
-            background-color: coral;
+            /* background-color: coral; */
+            background-image: linear-gradient(180deg, coral, lightblue);
         }
         #submit{
             background-color: blue;
@@ -17,6 +20,10 @@
             border-radius: 7px;
             border: none;
             margin-top: 10px;
+            cursor: pointer;
+        }
+        #submit:hover{
+            background-color: darkblue;
         }
         .inputBox{
             margin-top: 10px;
@@ -29,7 +36,7 @@
     </style>
     <body>
         <h1>Register Form</h1>
-        <form action="Data.php" method="get">
+        <form action="Data.php" method="post">
             <input type="text" class="inputBox" name="name" placeholder="Name"/>
             <br>
             <input type="password" class="inputBox" name="password" placeholder="Password"/>
@@ -44,7 +51,8 @@
             <input type="radio" name="gender" value="Female">
             <label for="css">Female</label><br>
 
-            <input type="submit" id="submit" />
+            <input type="submit" id="submit" value="Register" name="register"/>
         <form>
     </body>
 <html>
+
